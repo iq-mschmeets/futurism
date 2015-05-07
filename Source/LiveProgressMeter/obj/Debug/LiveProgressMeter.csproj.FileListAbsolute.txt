@@ -1,0 +1,12 @@
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\LiveProgressMeter\bin\LiveProgressMeter.dll.config
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\LiveProgressMeter\bin\LiveProgressMeter.dll
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\LiveProgressMeter\bin\LiveProgressMeter.pdb
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\LiveProgressMeter\obj\Debug\LiveProgressMeter.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\LiveProgressMeter\obj\Debug\LiveProgressMeter.dll
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\LiveProgressMeter\obj\Debug\LiveProgressMeter.pdb
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\LiveProgressMeter\bin\LiveProgressMeter.dll.config
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\LiveProgressMeter\bin\LiveProgressMeter.dll
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\LiveProgressMeter\bin\LiveProgressMeter.pdb
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\LiveProgressMeter\obj\Debug\LiveProgressMeter.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\LiveProgressMeter\obj\Debug\LiveProgressMeter.dll
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\LiveProgressMeter\obj\Debug\LiveProgressMeter.pdb

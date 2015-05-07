@@ -1,0 +1,12 @@
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\AceEditor\bin\AceEditor.dll.config
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\AceEditor\bin\AceEditor.dll
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\AceEditor\bin\AceEditor.pdb
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\AceEditor\obj\Debug\AceEditor.dll
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\AceEditor\obj\Debug\AceEditor.pdb
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\JSProgressBar\AceEditor\obj\Debug\AceEditor.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\AceEditor\bin\AceEditor.dll.config
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\AceEditor\bin\AceEditor.dll
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\AceEditor\bin\AceEditor.pdb
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\AceEditor\obj\Debug\AceEditor.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\AceEditor\obj\Debug\AceEditor.dll
+C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\AceEditor\obj\Debug\AceEditor.pdb

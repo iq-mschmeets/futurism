@@ -1,0 +1,234 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery Splitter Demo</title>
+    <meta name="Description" content="jQuery Splitter Demo" />
+    <link rel="shortcut icon" href="" />
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://jquery.jcubic.pl/js/jquery.splitter-0.14.0.js"></script>
+
+    <!--Ace Editor-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js"></script>
+
+    <link href="http://jquery.jcubic.pl/css/jquery.splitter.css" rel="stylesheet" />
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        jQuery(function ($) {
+            $('#widget').width(1200).height(550).split({ orientation: 'vertical', limit: 1140 });
+            $('#a').split({ orientation: 'vertical', limit: 100 });
+        });
+    </script>
+    <style>
+        #spliter2 .a {
+            background-color: #2d2d2d;
+        }
+
+        #spliter2 .b {
+            background-color: #2d002d;
+        }
+
+        #foo {
+            background-color: #E92727;
+        }
+
+        #x {
+            background-color: #D7EBF8;
+            min-width: 100px;
+            max-width: 200px;
+        }
+
+        #y {
+            background-color: #F8F8F8;
+        }
+
+        #b {
+            background-color: #73A4EF;
+        }
+
+        #bar {
+            background-color: #BEE927;
+        }
+
+        #editor {
+            /** Setting height is also important, otherwise editor wont showup**/
+            height: 550px;
+        }
+    </style>
+
+    <style>
+        .file-list > li > a {
+            padding: 1px 7px;
+        }
+
+            .file-list > li > a:hover {
+                background-color: #f5f5f5;
+            }
+
+        .selected {
+            color: #ffffff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+            background-color: #0088cc;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            border: 1px solid rgb(190, 190, 190);
+            background-color: rgb(255, 253, 218);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="#">Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                        <a href="#">Separated link</a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                        <a href="#">One more separated link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" />
+                            </div> <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                        <a href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div>
+                    <a class="btn btn-success" onclick="$().MarkupEditor('save');" data-toggle="tooltip" data-placement="bottom" title="Save">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                    </a>
+                    <a class="btn btn-success" onclick="$().MarkupEditor('reset');" data-toggle="tooltip" data-placement="bottom" title="Reset">
+                        <span class="glyphicon glyphicon-refresh"></span>
+                    </a>
+                    <a class="btn btn-success" onclick="$().MarkupEditor('find');" data-toggle="tooltip" data-placement="bottom" title="Find">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </a>
+                    <a class="btn btn-success" onclick="$().MarkupEditor('findReplace');" data-toggle="tooltip" data-placement="bottom" title="Find & Replace">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </a>
+                    <span id="lblMsg"></span>
+                </div>
+
+                <div id="widget">
+                    <div id="a">
+                        <div id="x">
+                            <details open="">
+                                <summary class="header">Files</summary>
+                                <ul class="nav nav-list file-list">
+                                    <li>
+                                        <a data-type="html" href="Files/index.html">index.html</a>
+                                    </li>
+                                    <li>
+                                        <a data-type="javascript" href="Files/js/scripts.js">script.js</a>
+                                    </li>
+                                    <li>
+                                        <a data-type="css" href="Files/css/styles.css">styles.css</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div id="y">
+
+                            <div id="editor">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/FileEditor.js"></script>
+
+    <script>
+
+        $().MarkupEditor({
+            editorEL: '#editor',
+            fileListEL: '.file-list',
+            urls: [{ 'type': 'css', 'url': 'Default.aspx/cssSaveFile' }, { 'type': 'html', 'url': 'Default.aspx/htmlSaveFile' }],
+            msgLabel: '#lblMsg'
+        });
+
+    </script>
+
+</body>
+</html>
