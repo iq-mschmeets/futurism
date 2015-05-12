@@ -1,4 +1,4 @@
-﻿
+
 (function ($) {
 
     var editor;
@@ -74,7 +74,6 @@
             __fileName = $(this).text();
             //var extension = fileURL.replace(/^.*\./, '');
             extension = $(this).attr('data-type');
-
             $.ajax({
                 url: fileURL,
                 dataType: "text",
@@ -82,8 +81,12 @@
 
                     editor = ace.edit(options.editorEL.replace('#', ''));
                     editor.setTheme("ace/theme/chrome");
-                    if (extension == 'js')
+                    if (extension == 'js' || extension == 'script'){
                         extension = 'javascript';
+                    } else if( extension == 'xslt' ){
+                        extension = 'xml';
+                    }
+console.log("Extension: "+extension);
                     editor.getSession().setMode("ace/mode/" + extension.toLowerCase());
                     editor.setValue(data, -1);
                 },
@@ -110,30 +113,37 @@
 
                     showMessage(__msgLabel, 'Saving file...', 'info', false);
 
-                    var dataToSend = JSON.stringify({ 'fileContent': editor.getSession().getValue() });
+                    var obj = { 
+                        'fileContent': editor.getSession().getValue(),
+                        'fileURL'    : __fileName 
+                    };
+                    var dataToSend = JSON.stringify( obj );
 
-                    var formData = new FormData();
-                    formData.append('FileContent', dataToSend);
-                    formData.append('FileURL', fileURL);
-                    formData.append('FileName', 'value2');
-                    formData.append('key2', 'value2');
-                    formData.append('key2', 'value2');
-                    formData.append('key2', 'value2');
+                    // var formData = new FormData();
+                    // formData.append('fileContent', dataToSend);
+                    // formData.append('fileURL', fileURL);
+                    // formData.append('fileName', 'value2');
+                    // formData.append('key2', 'value2');
+                    // formData.append('key2', 'value2');
+                    // formData.append('key2', 'value2');
+
 
                     $.ajax({
                         url: saveURL,
                         type: "POST",
+                       // data: formData,
+                       // processData: false,
+
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
-                        data: dataToSend, // pass that text to the server as a correct JSON String
-                        success: function (msg) {
-                            //alert(msg.d);
-                            showMessage(__msgLabel, 'File saved...', 'success', true);
-                        },
-                        error: function (type) {
-                            //alert("ERROR!!" + type.responseText);
+                        data: dataToSend // pass that text to the server as a correct JSON String
+
+                    }).always(function (msg) {
+                        if( /Exception/i.test( msg ) ){
                             showMessage(__msgLabel, type.responseText, 'error', true);
-                        }
+                        } else {
+                            showMessage(__msgLabel, 'File saved...', 'success', true);
+                        } 
                     });
 
                 }
@@ -184,7 +194,11 @@
 
             if (autohide) {
                 setTimeout(function () {
-                    $(selector).hide();
+                    //$(selector).hide();
+                    $(selector).text('');
+console.log(cls);                    
+                    $(selector).removeClass(cls);
+                    $(selector).addClass('default-message');
                 }, 5000);
             }
         }
@@ -195,45 +209,6 @@
 
         function findReplace() {
             editor.execCommand("replace");
-            ////editor.execCommand("find");
-
-            //var range = editor.find('section', {
-            //    wrap: true,
-            //    caseSensitive: true,
-            //    wholeWord: true,
-            //    regExp: false,
-            //    preventScroll: true // do not change selection
-            //})
-            ////range.start.column = 0
-            ////range.end.column = Number.MAX_VALUE
-            ////editor.session.replace(range, "x" + editor.session.getLine(range.start.row) + "x")
-            //editor.session.replace(range, 'DEEPAK')
-            //editor.selection.setRange(range)
-
-            ////////var html = '<img style="display: block;margin: 0 auto;" src="http://placehold.it/200x100" />';
-
-            ////////if (__findReplaceDialog == null) {
-            ////////    __findReplaceDialog = $(document.createElement('div'));
-            ////////    __findReplaceDialog.attr({ 'id': '__modalBG', 'style': 'display:none;' });
-
-            ////////    __findReplaceDialog.css({
-            ////////        'height': '100px',
-            ////////        'width': '400px',
-            ////////        'position': 'fixed',
-            ////////        'top': '0',
-            ////////        'left': '0',
-            ////////        'right': '0',
-            ////////        'margin': '0 auto',
-            ////////        'background-color': 'rgba(0,0,255,0.2)'
-            ////////    })
-            ////////    __findReplaceDialog.append(html);
-            ////////}
-
-            ////////$(__findReplaceDialog).show(10);
-
-            //__findReplaceDialog.html('hello there');
-            //__findReplaceDialog.dialog('open');
-
         }
 
         return this;
