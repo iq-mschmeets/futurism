@@ -10,3 +10,9 @@ C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\TableController\bi
 C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\TableController\obj\Debug\TableController.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\TableController\obj\Debug\TableController.dll
 C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\TableController\obj\Debug\TableController.pdb
+D:\Deepak\Projects\Futurism\trunk\Source\TableController\bin\TableController.dll.config
+D:\Deepak\Projects\Futurism\trunk\Source\TableController\bin\TableController.dll
+D:\Deepak\Projects\Futurism\trunk\Source\TableController\bin\TableController.pdb
+D:\Deepak\Projects\Futurism\trunk\Source\TableController\obj\Debug\TableController.csprojResolveAssemblyReference.cache
+D:\Deepak\Projects\Futurism\trunk\Source\TableController\obj\Debug\TableController.dll
+D:\Deepak\Projects\Futurism\trunk\Source\TableController\obj\Debug\TableController.pdb

@@ -10,3 +10,9 @@ C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\AceEditor\bin\AceE
 C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\AceEditor\obj\Debug\AceEditor.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\AceEditor\obj\Debug\AceEditor.dll
 C:\Users\admin\Documents\Visual Studio 2013\WebSites\Futurism\AceEditor\obj\Debug\AceEditor.pdb
+D:\Deepak\Projects\Futurism\trunk\Source\AceEditor\bin\AceEditor.dll.config
+D:\Deepak\Projects\Futurism\trunk\Source\AceEditor\bin\AceEditor.dll
+D:\Deepak\Projects\Futurism\trunk\Source\AceEditor\bin\AceEditor.pdb
+D:\Deepak\Projects\Futurism\trunk\Source\AceEditor\obj\Debug\AceEditor.csprojResolveAssemblyReference.cache
+D:\Deepak\Projects\Futurism\trunk\Source\AceEditor\obj\Debug\AceEditor.dll
+D:\Deepak\Projects\Futurism\trunk\Source\AceEditor\obj\Debug\AceEditor.pdb

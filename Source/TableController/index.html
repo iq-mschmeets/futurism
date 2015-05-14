@@ -6,17 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Heroic Features - Start Bootstrap Template</title>
+    <title>TableController</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/heroic-features.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+    <style>
+       
+        * {
+            font-size: 12px;
+            font-family: 'Helvetica', Arial, Sans-Serif;
+            box-sizing: border-box;
+        }
+
+        table, th, td {
+            border-collapse: collapse;
+            border: solid 1px #ccc;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        th {
+            background: #0f4871;
+            color: #fff;
+        }
+
+        tr:nth-child(2n) {
+            background: #f1f1f1;
+        }
+
+        td:hover {
+            color: #fff;
+            background: #CA293E;
+        }
+
+        td:focus {
+            background: blue;
+        }
+
+        .editing {
+            border: 2px dotted #c9c9c9;
+        }
+
+        #edit {
+            display: none;
+        }
+    </style>
+
 </head>
 <body>
     <!-- Navigation -->
@@ -52,11 +89,11 @@
 
 
         <div id="divOne">
-            <table class=â€table datatablecontainerâ€>
+            <table id="tbl1" class="table datatablecontainer">
 
                 <thead>
                     <tr>
-                        <th scope="col"></th>
+                        <th scope="col">aaaaa</th>
                         <th scope="col">Name</th>
                         <th scope="col">Age</th>
                         <th scope="col">Gender</th>
@@ -64,10 +101,10 @@
                 </thead>
                 <thead>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>aa</th>
+                        <th>bb</th>
+                        <th>cc</th>
+                        <th>dd</th>
                     </tr>
 
                 </thead>
@@ -89,11 +126,13 @@
                 </tbody>
 
             </table>
+
+
         </div>
 
         <br />
         <br />
-        
+
         <hr>
         <!-- Footer -->
         <footer>
@@ -110,10 +149,29 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <script src="js/TableController.js"></script>
+
 
     <script>
 
-
+        $().TableController({
+            tableId: '#tbl1'
+            //, cellSelect: function (data) {
+            //    console.log(data);
+            //}
+            //, cellDeSelect: function (data) {
+            //    console.log(data);
+            //}
+            //, rowSelect: function (data) {
+            //    console.log(data);
+            //}
+            //, rowDeSelect: function (data) {
+            //    console.log(data);
+            //}
+            , columnSelect: function () {
+                console.log('columnSelect event fired.');
+            }
+        });
 
     </script>
 </body>
