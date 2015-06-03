@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>TableController</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+
+    <style>
+       
+        * {
+            font-size: 12px;
+            font-family: 'Helvetica', Arial, Sans-Serif;
+            box-sizing: border-box;
+        }
+
+        table, th, td {
+            border-collapse: collapse;
+            border: solid 1px #ccc;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        th {
+            background: #0f4871;
+            color: #fff;
+        }
+
+        tr:nth-child(2n) {
+            background: #f1f1f1;
+        }
+
+        td:hover {
+            color: #fff;
+            background: #CA293E;
+        }
+
+        td:focus {
+            background: blue;
+        }
+
+        .selected {
+            background: red;
+        }
+
+        .editing {
+            border: 2px dotted #c9c9c9;
+        }
+
+        #edit {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Simple JS</a>
+                    </li>
+                    <li>
+                        <a href="Backbone.html">Backbone Implementation</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+
+
+        <div id="divOne">
+            <table id="tbl1" class="table datatablecontainer">
+
+                <thead>
+                    <tr>
+                        <th scope="col">aaaaa</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Gender</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>aa</th>
+                        <th>bb</th>
+                        <th>cc</th>
+                        <th>dd</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.NAME">Row 1, Cell 1</td>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.AGE">Row 1, Cell 2</td>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.GENDER">Row 1, Cell 3</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.NAME">Row 2, Cell 1</td>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.AGE">Row 2, Cell 2</td>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.GENDER">Row 2, Cell 3</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.NAME">Row 3, Cell 1</td>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.AGE">Row 3, Cell 2</td>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.GENDER">Row 3, Cell 3</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.NAME">Row 4, Cell 1</td>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.AGE">Row 4, Cell 2</td>
+                        <td data-meta-column="ELEMENT_ATTR_C1086.GENDER">Row 4, Cell 3</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+        </div>
+
+        <br />
+        <br />
+
+        <span id="container"></span>
+
+
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- /.container -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.0/backbone-min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/TableController2.js"></script>
+
+
+    <script>
+
+        var TableController = new TableController({ el: '#tbl1' });
+        
+    </script>
+</body>
+</html>

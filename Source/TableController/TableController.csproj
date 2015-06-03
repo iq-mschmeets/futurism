@@ -63,12 +63,14 @@
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\vgrabber.gif" />
+    <Content Include="backbone.html" />
     <Content Include="index.html" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\TableController.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\splitter.js" />
+    <Content Include="js\TableController2.js" />
     <Content Include="Requirements\tabtest.html" />
     <Content Include="Web.config" />
   </ItemGroup>

@@ -1,0 +1,165 @@
+<html>
+<head>
+<script type="text/javascript" src="script/jquery.js"></script>
+
+<style type="text/css">
+	table {
+		table-border: 1;
+		border-collapse: collapse;
+	}
+	td, th{
+		border: 1px solid #aaa;
+		padding: 5px;
+	}
+</style>
+</head>
+<body>
+<div id="divOne">
+<table class=”table dataTableContainer”>
+
+<thead> 
+    <tr>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+    </tr>
+</thead>
+<thead> 
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+
+</thead>
+
+<tbody>
+    <tr>
+        <th></th>
+        <td data-meta-column="ELEMENT_ATTR_C1086.NAME">Row 1, Cell 1</td>
+        <td data-meta-column="ELEMENT_ATTR_C1086.AGE">Row 1, Cell 2</td>
+        <td data-meta-column="ELEMENT_ATTR_C1086.GENDER">Row 1, Cell 3</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td data-meta-column="ELEMENT_ATTR_C1086.NAME">Row 2, Cell 1</td>
+        <td data-meta-column="ELEMENT_ATTR_C1086.AGE">Row 2, Cell 2</td>
+        <td data-meta-column="ELEMENT_ATTR_C1086.GENDER">Row 2, Cell 3</td>
+    </tr>
+</tbody>
+
+</table>
+</div>
+
+
+
+
+<script type="text/javascript">
+/////////////////////////////////////////////////////////////////////////////
+// Three testing functions, exists, truthy, and test.
+/////////////////////////////////////////////////////////////////////////////
+function exists(arg){
+	return !((typeof(arg) == "undefined") || (arg == null));
+}
+
+function truthy(arg){
+  	return (arg !== false) && exists(arg);
+}
+
+function test( condition, label ){
+	if( truthy( condition ) ){
+		console.log("  PASS: "+label);
+	} else {
+		console.log("  FAIL: "+label);
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// Validate the testing functions
+/////////////////////////////////////////////////////////////////////////////
+console.log("Validate tests:");
+test( true,  'This is true, and should pass.');
+test( false, 'This is false, and should fail.');
+test( null,  'This is null, and should fail');
+test( window.doesntExist, 'This does not exist, and should fail.');
+
+
+/////////////////////////////////////////////////////////////////////////////
+// This is a stub for one of the modules. Intended to show basic test
+// behavior that is expected, but does NOT meet all requirements.
+/////////////////////////////////////////////////////////////////////////////
+var TableController = function(sel){
+	this.el = $(sel).get(0);
+	var that = this;
+	$(this.el).on('click', 'td', function(evt){
+        that.trigger('cellSelect', that.getEventObject(evt));
+	});
+	$(this.el).on('click', 'thead tr th', function(evt){
+        that.trigger('columnSelect', that.getEventObject(evt));
+	});
+};
+TableController.prototype.getEventObject = function(evt){
+	rval = {};
+	rval['el'] = evt.target;
+	rval['data'] = {};
+
+	return rval;
+};
+_.extend(TableController.prototype, Backbone.Events);
+
+
+/////////////////////////////////////////////////////////////////////////////
+// This is a notional object created for testing behavior.
+/////////////////////////////////////////////////////////////////////////////
+var TestObject = function(){};
+_.extend(TestObject.prototype, Backbone.Events);
+
+
+TestObject.prototype.handlerTest = function( obj ){
+    test( obj.el, 'got the el' );
+    test( obj.el.tagName.toLowerCase() === 'td', 'el is a td');
+ 	test( obj.data, 'argument object included a data object'  );
+};
+
+TestObject.prototype.rowChangeChandler = function( obj ){
+	test( obj.el.tagName.toLowerCase() == 'tr');
+}
+
+
+var tableController = new TableController('div#divOne table');
+var testObject = new TestObject();
+
+/////////////////////////////////////////////////////////////////////////////
+// Wire up some events...
+/////////////////////////////////////////////////////////////////////////////
+testObject.listenTo(tableController, 'leaveCell', testObject.handlerTest, testObject);
+testObject.listenTo(tableController, 'cellSelect', testObject.handlerTest, testObject);
+testObject.listenTo(tableController, 'columnSelect', testObject.handlerTest, testObject);
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Trigger some events, mocking what the finished module will do.
+/////////////////////////////////////////////////////////////////////////////
+console.log('Should result in a pass, pass, and a fail, no data object in event.');
+tableController.trigger('leaveCell', {
+	'el' : $('#divOne table tbody td:first').get(0)
+});
+
+
+console.log('Should result in pass, pass, pass, data object in event.');
+tableController.trigger('leaveCell', {
+	'el' : $('#divOne table tbody td:first').get(0),
+	'data' : {
+		'meta' : 'some.meta'
+	}
+});
+
+/////////////////////////////////////////////////////////////////////////////
+// Excercise API navigation functions...
+/////////////////////////////////////////////////////////////////////////////
+
+</script>
+</body>
+</html>

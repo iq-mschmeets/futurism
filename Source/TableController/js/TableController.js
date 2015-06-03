@@ -91,16 +91,17 @@
                     c = currCell.next();
 
                 if (e.shiftKey) {
-                    //if (isTdExistsInArray(c, selectedCells) == false) {
-                    //    selectedCells.push(c);
-                    //    c.addClass('selected');
-                    //}
-                    selectedCells = $(currCell).closest('table').find('td[class=selected]');
+                    if (isTdExistsInArray(c, selectedCells) == false) {
+                        selectedCells.push(c);
+                        c.addClass('selected');
+                    }
                 }
                 else {
                     $(c).closest('table').find('td').removeClass('selected');
                     selectedCells = []; //cleared selected cells
                 }
+
+                selectedCells = $(currCell).closest('table').find('td[class=selected]');
 
             } else if (e.which == 37) {
                 // Left Arrow
@@ -137,14 +138,14 @@
                     $(selectedCells).each(function () {
                         var cellIndex = $(this).index();
                         if ($(this).closest('tr').prev().children().eq(cellIndex) != undefined) {
-                            $(this).closest('tr').prev().children().eq(cellIndex).toggleClass('selected');
+                            $(this).closest('tr').prev().children().eq(cellIndex).addClass('selected');
                         }
                     });
 
-                    //if (isTdExistsInArray(currCell, selectedCells) == false) {
-                    //    selectedCells.push(currCell);
-                    //    currCell.addClass('selected');
-                    //}
+                    if (isTdExistsInArray(currCell, selectedCells) == false) {
+                        //selectedCells.push(currCell);
+                        //currCell.addClass('selected');
+                    }
 
                     selectedCells = $(currCell).closest('table').find('td[class=selected]');
                 }
@@ -152,7 +153,6 @@
                     $(currCell).closest('table').find('td').removeClass('selected');
                     selectedCells = []; //cleared selected cells
                 }
-
 
                 c = currCell.closest('tr').prev().find('td:eq(' + (currCell.index() - 1) + ')');
             } else if (e.which == 40) {
@@ -162,22 +162,15 @@
                         var cellIndex = $(this).index();
                         if ($(this).closest('tr').next().children().eq(cellIndex) != undefined) {
                             $(this).closest('tr').next().children().eq(cellIndex).addClass('selected');
-
-                            //$($(this).closest('tr').next().children().eq(cellIndex)).each(function () {
-                            //    if (isTdExistsInArray($(this), selectedCells) == false) {
-                            //        selectedCells.push($(this));
-                            //        $(this).addClass('selected');
-                            //    }
-                            //});
-
-                            selectedCells = $(currCell).closest('table').find('td[class=selected]');
                         }
                     });
 
                     if (isTdExistsInArray(currCell, selectedCells) == false) {
-                        selectedCells.push(currCell);
+                        //selectedCells.push(currCell);
                         currCell.addClass('selected');
                     }
+
+                    selectedCells = $(currCell).closest('table').find('td[class=selected]');
                 }
                 else {
                     $(currCell).closest('table').find('td').removeClass('selected');

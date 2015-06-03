@@ -1,0 +1,6 @@
+D:\Deepak\Projects\Futurism\trunk\Source\DragDropTaskOne\bin\DragDropTaskOne.dll.config
+D:\Deepak\Projects\Futurism\trunk\Source\DragDropTaskOne\bin\DragDropTaskOne.dll
+D:\Deepak\Projects\Futurism\trunk\Source\DragDropTaskOne\bin\DragDropTaskOne.pdb
+D:\Deepak\Projects\Futurism\trunk\Source\DragDropTaskOne\obj\Debug\DragDropTaskOne.csprojResolveAssemblyReference.cache
+D:\Deepak\Projects\Futurism\trunk\Source\DragDropTaskOne\obj\Debug\DragDropTaskOne.dll
+D:\Deepak\Projects\Futurism\trunk\Source\DragDropTaskOne\obj\Debug\DragDropTaskOne.pdb
