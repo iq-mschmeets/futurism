@@ -1,0 +1,177 @@
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+
+		<style type="text/css">
+		body{ margin: 15px;}
+		</style>
+	</head>
+	<body>
+		<h4>Map Data Columns to colums from your CSV file.</h4>
+		
+		<form method="POST" action="http://tigger:8082/ee/request/csvdataload">
+		<input type="hidden" name="class-id" value="1234" /> 
+		<div class="row">
+			<div class="col-md-4">
+			<h5>Action:</h5>
+			<div class="form-group">
+				<div class="radio">
+					<label> <input type="radio" name="action" value="insert" checked="checked" />
+						    Insert (add new records)
+					</label>
+				</div>
+				<div class="radio">
+					<label>	<input type="radio" name="action" value="update"  />
+						Update (modify matching records)
+					</label>
+				</div>
+				<div class="radio">
+					<label>	<input type="radio" name="action" value="delete"  />
+						Delete (delete matching records)
+					</label>
+				</div>
+			</div>
+		    </div>
+		    <div class="col-md-4">
+		    <h5>Key Column:</h5>
+			<div class="form-group">
+				<p>If you selected Update, or Delete, you need to select a Key column,
+					from the database, for matching. This column should have a unique value. </p>
+			    <label for="primary-key">Key Data Column for Match</label>
+			    <select id="primary-key" name="primary-key">
+					    <option value="123">Name</option>
+					    <option value="124">Description</option>
+					    <option value="125">Count</option>
+					    <option value="329">Start Date</option>
+					    <option value="-1" selected="1">Not required for Insert</option>
+					</select>
+			</div>
+			</div>
+			<div class="col-md-4">
+			<h5>Date Format:</h5>
+			<div class="form-group">
+				<p>If you are including a Date column, you need to specify
+				the date format for your CSV data. </p>
+			    <label for="date-format">Date Format</label>
+			    <select id="date-format" name="date-format">
+				    <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+				    <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+				    <option value="YYYY-MM-DD" selected="1">YYYY-MM-DD</option>
+				</select>
+			</div>
+			</div>
+		</div>
+		<p>Each selector contains the available choices for Data Columns. Select one for each
+			column of your CSV file. You can exclude columns by leaving them unselected.</p>
+		<table class="table table-bordered">
+			<thead>
+
+			</thead>
+			<tbody>
+				<tr class="meta info"> 
+					<th scope="col">Data Rows</th>
+					<td>
+					<select name="column-1">
+					    <option value="123">Name</option>
+					    <option value="124">Description</option>
+					    <option value="125">Count</option>
+					    <option value="329">Start Date</option>
+					    <option value="-1" selected="1">Don't include this column.</option>
+					</select>
+					</td>
+					<td>
+					<select name="column-2">
+					    <option value="123">Name</option>
+					    <option value="124">Description</option>
+					    <option value="125">Count</option>
+					    <option value="329">Start Date</option>
+					    <option value="-1" selected="1">Don't include this column.</option>
+					</select>
+					</td>
+					<td>
+					<select name="column-3">
+					    <option value="123">Name</option>
+					    <option value="124">Description</option>
+					    <option value="125">Count</option>
+					    <option value="329">Start Date</option>
+					    <option value="-1" selected="1">Don't include this column.</option>
+					</select>
+					</td>
+					<td>
+					<select name="column-4">
+					    <option value="123">Name</option>
+					    <option value="124">Description</option>
+					    <option value="125">Count</option>
+					    <option value="329">Start Date</option>
+					    <option value="-1" selected="1">Don't include this column.</option>
+					</select>
+					</td>
+				</tr>
+				<tr class="data">
+					<th scope="row">Row 1</th>
+					<td data-column="1">
+						col one
+					</td>
+					<td data-column="2">
+						col two
+					</td>
+					<td data-column="3">
+						1
+					</td>
+					<td data-column="4">
+						02/23/2014
+					</td>			
+				</tr>
+				<tr class="data">
+					<th scope="row">Row 2</th>
+					<td data-column="1">
+						col one
+					</td>
+					<td data-column="2">
+						col two
+					</td>
+					<td data-column="3">
+						1
+					</td>
+					<td data-column="4">
+						02/23/2014
+					</td>			
+				</tr>
+				<tr class="data">
+					<th scope="row">Row 3</th>
+					<td data-column="1">
+						col one
+					</td>
+					<td data-column="2">
+						col two
+					</td>
+					<td data-column="3">
+						1
+					</td>
+					<td data-column="4">
+						02/23/2014
+					</td>			
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4"></td>
+					<td>
+						<span class="pull-right">
+							<button type="reset">Reset</button>
+							<button type="submit">Import</button>
+						</span>
+					</td>
+				</tr>
+			</tfoot>	
+		</table>
+		</form>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</html>

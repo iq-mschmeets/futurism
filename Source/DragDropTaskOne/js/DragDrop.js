@@ -40,10 +40,17 @@
                     if (formdata) formData.append('file', files[i]);
                 }
 
-                var span = $(this).parent();
-                var data = $(span).data();
-                var elementName = "a__" + data.classid + "__" + data.eid + "__" + data.attributeid;
-                formData.append('name', elementName);
+                // Modified to allow a form assembly callback, this
+                // allows reuse of the overall plugin, but user options
+                // on how the data for submission, is to be structured.
+                if( options.formCallback ){
+                    options.formCallback( $this, formData );
+                } else {
+                    var span = $(this).parent();
+                    var data = $(span).data();
+                    var elementName = "a__" + data.classid + "__" + data.eid + "__" + data.attributeid;
+                    formData.append('name', elementName);
+                }
 
                 // now post a new XHR request
                 if (formdata) {
