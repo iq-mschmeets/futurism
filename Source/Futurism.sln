@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AceEditor", "AceEditor\AceEditor.csproj", "{3EF72E15-B035-4243-AD68-7E662D05035E}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableController", "TableController\TableController.csproj", "{CB11188B-E430-460E-B87A-C6C38C64869A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropTaskOne", "DragDropTaskOne\DragDropTaskOne.csproj", "{A1ECD4E9-92D8-41D1-B158-9CA5E46F6449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discussions", "Discussions\Discussions.csproj", "{21328542-1D30-4BF6-988A-6BF91525940C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A1ECD4E9-92D8-41D1-B158-9CA5E46F6449}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1ECD4E9-92D8-41D1-B158-9CA5E46F6449}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1ECD4E9-92D8-41D1-B158-9CA5E46F6449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21328542-1D30-4BF6-988A-6BF91525940C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21328542-1D30-4BF6-988A-6BF91525940C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21328542-1D30-4BF6-988A-6BF91525940C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21328542-1D30-4BF6-988A-6BF91525940C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
