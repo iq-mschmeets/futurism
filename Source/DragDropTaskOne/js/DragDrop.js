@@ -37,7 +37,7 @@
 
                 var formData = new FormData();
                 for (var i = 0; i < files.length; i++) {
-                    if (formdata) formData.append('file', files[i]);
+                    if (formData) formData.append('file', files[i]);
                 }
 
                 // Modified to allow a form assembly callback, this
@@ -53,7 +53,7 @@
                 }
 
                 // now post a new XHR request
-                if (formdata) {
+                if (formData) {
                     var xhr = new XMLHttpRequest();
                     xhr.open('POST', options.url);
                     xhr.onload = function () {
