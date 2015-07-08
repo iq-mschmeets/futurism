@@ -210,7 +210,7 @@ function postData() {
 
     var formData = new FormData();
     for (var i = 0; i < __files.length; i++) {
-        if (formdata) formData.append('SOURCE_FILE', __files[i]);
+        if (formData) formData.append('SOURCE_FILE', __files[i]);
     }
 
     var span = $(curSpan).parent();
@@ -226,7 +226,7 @@ function postData() {
     formData.append('verb', 'Create');
    
     // now post a new XHR request
-    if (formdata) {
+    if (formData) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', __options.url);
         xhr.onload = function () {
@@ -250,6 +250,7 @@ function postData() {
 
         if (__options.oncomplete) {
             console.log('Upload Completed');
+            __options.oncomplete();
         }
     }
 }
