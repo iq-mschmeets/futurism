@@ -34,7 +34,7 @@
             <textarea id="txtRemark" name="txtRemark" cols="60" rows="9" class="form-control"></textarea>
         </div>
         <div class="row">
-            <input type="button" class="btn btn-success" style="float:right; margin:10px;" value="Save" /> 
+            <input type="button" class="btn btn-success" style="float:right; margin:10px;" value="Save" onclick="saveReply()" /> 
         </div>
 
     </div>
@@ -46,7 +46,14 @@
     <script src="js/Discussion.js"></script>
 
     <script>
+        function saveReply()
+        {
+            //Code for saving the form
+            //
 
+            //Reloading parent page to refresh the discussion thread.
+            window.top.location.reload();
+        }
     </script>
 
 

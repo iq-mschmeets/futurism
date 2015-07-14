@@ -49,6 +49,15 @@
           li ol,
           li ul {margin-top:6px;}
           ol ol li:last-child {margin-bottom:0;}
+
+          .userThumb{
+          height:50px;
+          width:50px;
+          border-radius:5px;
+          border:1px solid #337AB7;
+          margin-right:5px;
+          }
+
         </style>
 
       </head>
@@ -73,12 +82,12 @@
             <![CDATA[
             
             
-         function openReplyForm(btn)
+         function openReplyForm(btn, discID)
           {
           var divReplyForm=$(btn).prev();
           console.log(divReplyForm);
           
-          $(divReplyForm).find("#replyFrame").attr("src", 'AddDiscussion.html');
+          $(divReplyForm).find("#replyFrame").attr("src", 'AddDiscussion.html?discid=' + discID);
           $(divReplyForm).slideToggle( "slow", function() {
             
             if($(divReplyForm).is(':visible'))
@@ -123,7 +132,9 @@
           <li>
             <xsl:choose>
               <xsl:when test="$level = 1">
+                
                 <h3 class="dsTitle">
+                  <img class="userThumb" />
                   <a href="../request/discussion?pid={$disc-id}&amp;v=form&amp;topId={$top-id}" title="Click to Reply"
                      onclick="return discussionReply({$disc-id},true,{$top-id});" >
                     <xsl:value-of select="col[@meta='DISCUSSION.TITLE']" />
@@ -136,6 +147,7 @@
               <xsl:otherwise>
                 <div style="margin-left:{$level}em;">
                   <h4 class="dsTitle">
+                    <img class="userThumb" />
                     <a href="../request/discussion?pid={$disc-id}&amp;v=form&amp;topId={$top-id}" title="Click to Reply"
                        onclick="return discussionReply({$disc-id},true,{$top-id});">
                       <xsl:value-of select="col[@meta='DISCUSSION.TITLE']" />
@@ -189,6 +201,6 @@
     <div class="divReplyForm" style="display:none;width:80%">
       <iframe src="" frameborder="0" id="replyFrame" name="replyFrame" style="width:100%; height:350px;"></iframe>
     </div>
-    <input type="button" class="btn btn-primary btn-sm" style="margin-left:20px;" value="Reply" onclick="openReplyForm(this);"/>
+    <input type="button" class="btn btn-primary btn-sm" style="margin-left:20px;" value="Reply" onclick="openReplyForm(this,{$disc-id});"/>
   </xsl:template>
 </xsl:stylesheet>

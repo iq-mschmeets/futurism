@@ -71,7 +71,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\vgrabber.gif" />
     <Content Include="index.html" />
-    <Content Include="index.xml" />
+    <Content Include="index.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\Discussion.js" />
