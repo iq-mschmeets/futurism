@@ -1,6 +1,6 @@
-E:\Projects\Mark & Randy\futurism\Source\Discussions\bin\DragDropTaskOne.dll.config
-E:\Projects\Mark & Randy\futurism\Source\Discussions\bin\DragDropTaskOne.dll
-E:\Projects\Mark & Randy\futurism\Source\Discussions\bin\DragDropTaskOne.pdb
 E:\Projects\Mark & Randy\futurism\Source\Discussions\obj\Debug\Discussions.csprojResolveAssemblyReference.cache
-E:\Projects\Mark & Randy\futurism\Source\Discussions\obj\Debug\DragDropTaskOne.dll
-E:\Projects\Mark & Randy\futurism\Source\Discussions\obj\Debug\DragDropTaskOne.pdb
+E:\Projects\Mark & Randy\futurism\Source\Discussions\bin\Discussions.dll.config
+E:\Projects\Mark & Randy\futurism\Source\Discussions\bin\Discussions.dll
+E:\Projects\Mark & Randy\futurism\Source\Discussions\bin\Discussions.pdb
+E:\Projects\Mark & Randy\futurism\Source\Discussions\obj\Debug\Discussions.dll
+E:\Projects\Mark & Randy\futurism\Source\Discussions\obj\Debug\Discussions.pdb

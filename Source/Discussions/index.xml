@@ -32,5 +32,17 @@
       <col display="true" grp="0" label="STATUS_ID" meta="DISCUSSION.STATUS_ID" name="STATUS_ID" type="2">-1</col>
       <col display="true" grp="0" label="Thread Count" meta="PSEUDO.COUNT" name="Thread Count" type="2">1</col>
     </row>
+    <row num="3">
+      <col display="true" grp="0" label="LEVEL" meta="HIERARCHY.LEVEL" name="LEVEL" type="2">2</col>
+      <col display="true" grp="0" label="PARENT_DISCUSSION_ID" meta="DISCUSSION.PARENT_DISCUSSION_ID" name="PARENT_DISCUSSION_ID" type="2">6</col>
+      <col display="false" grp="0" label="DISCUSSION_ID" meta="DISCUSSION.DISCUSSION_ID" name="DISCUSSION_ID" type="2">7</col>
+      <col display="true" grp="0" label="USER_LABEL" meta="EE_USER.LABEL" name="USER_LABEL" type="12">System, Administrator  (EE)</col>
+      <col display="false" grp="0" label="USER_ELEM_ID" meta="EE_USER.ELEMENT_ID" name="USER_ELEM_ID" type="2">1</col>
+      <col display="true" grp="0" label="POST_TM" meta="DISCUSSION.POST_TM" name="POST_TM" type="12">2015-06-23 17:08:17</col>
+      <col display="true" grp="0" label="TITLE" meta="DISCUSSION.TITLE" name="TITLE" type="12">Re: My First Discussion</col>
+      <col display="true" grp="0" label="REMARK" meta="DISCUSSION.REMARK" name="REMARK" type="12">asldfkj alsdfj laksdfjaslkdfj asdlfkjas dflasj dflkasdfj salkfdj asdlkfj asdflkasjdflk asdj flkasdfj asdlkfj asdklfjasdlkfj asdlkfajs dflkasdjf lkasdjf lkasdfj asdlkfjasdlkfjsad flk jasdflkasdj flkasdjflaskdfjaslk dfjasdlk fjsdlkfj asl kdfj asdlkfjasdflksdjflkasdf jsdlkfj asldkfj salkdfj slkdfj asldkfj sadlkf jsdlfk sadfjlk sadjflkasdfj sadlkf jsadlkfj sdlkfj asdlkfjasdlkfjsa dflksjdflk asdjf lasdkfjasdlk fjasdlkfj adslkfjsdlkf jasdlkfa sdjflkadsj flksdfjsadlkf jasdlkfj asdlkfjsdlkfjasd flksajdf lkasdfj sldkfjaslk dfj sdlkfj sdlkfj asdlfdsjflk asjdflkasjflkasdjflaksdfj asldkjnsdlkfjasdlkfjasdlkfjsadlkfjasdlkf sadjflkasdfjlksadfjlksdfjldsk fjldskfj aslkdfj asdlkfjasdflk</col>
+      <col display="true" grp="0" label="STATUS_ID" meta="DISCUSSION.STATUS_ID" name="STATUS_ID" type="2">-1</col>
+      <col display="true" grp="0" label="Thread Count" meta="PSEUDO.COUNT" name="Thread Count" type="2">1</col>
+    </row>
   </sql>
 </env>

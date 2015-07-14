@@ -1,11 +1,56 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
   <xsl:param name="discussionId" />
-  <xsl:output method="xml" omit-xml-declaration="yes" indent="yes" />
+  <xsl:output method="html" omit-xml-declaration="yes" indent="yes" />
   <xsl:template name="discussion-controller" match="/">
     <html>
       <head>
-          <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+
+        <style>
+          ol {
+          counter-reset:li; /* Initiate a counter */
+          margin-left:0; /* Remove the default left margin */
+          padding-left:0; /* Remove the default left padding */
+          }
+
+          ol > li {
+          position:relative; /* Create a positioning context */
+          margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+          padding:4px 8px; /* Add some spacing around the content */
+          list-style:none; /* Disable the normal item numbering */
+          border-top:1px solid #337AB7;
+          /*background:#f6f6f6;*/
+          }
+
+          ol > li:before {
+          content:counter(li); /* Use the counter as content */
+          counter-increment:li; /* Increment the counter by 1 */
+          /* Position and style the number */
+          position:absolute;
+          top:-2px;
+          left:-2em;
+          -moz-box-sizing:border-box;
+          -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+          width:2em;
+          margin-right:8px;
+          padding:4px;
+          border-top:2px solid #337AB7;
+          color:#fff;
+          background:#337AB7;
+          font-weight:bold;
+          font-family:"Helvetica Neue", Arial, sans-serif;
+          text-align:center;
+          border-radius:20px;
+          margin-top:25px;
+          }
+          li ol,
+          li ul {margin-top:6px;}
+          ol ol li:last-child {margin-bottom:0;}
+        </style>
+
       </head>
       <body>
 
@@ -19,6 +64,45 @@
             </xsl:call-template>
           </xsl:for-each>
         </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script type="text/javascript">
+          //<xsl:comment>
+            <![CDATA[
+            
+            
+         function openReplyForm(btn)
+          {
+          var divReplyForm=$(btn).prev();
+          console.log(divReplyForm);
+          
+          $(divReplyForm).find("#replyFrame").attr("src", 'AddDiscussion.html');
+          $(divReplyForm).slideToggle( "slow", function() {
+            
+            if($(divReplyForm).is(':visible'))
+            {
+              $(btn).val('Close');
+              $(btn).removeClass('btn-primary');
+              $(btn).addClass('btn-danger');
+              $('html,body').animate({ scrollTop: $(btn).offset().top - ( $(window).height() - $(btn).outerHeight(true) ) / 2  }, 500);
+            }
+            else
+            {
+              $(btn).val('Reply');
+              $(btn).removeClass('btn-danger');
+              $(btn).addClass('btn-primary');
+            }
+            
+          });
+          
+          //alert($(btn));
+          }
+    //]]>
+          </xsl:comment>
+        </script>
+
       </body>
     </html>
 
@@ -102,6 +186,9 @@
     <blockquote class="dsRemark">
       <xsl:value-of disable-output-escaping="yes" select="col[@meta='DISCUSSION.REMARK']" />
     </blockquote>
-
+    <div class="divReplyForm" style="display:none;width:80%">
+      <iframe src="" frameborder="0" id="replyFrame" name="replyFrame" style="width:100%; height:350px;"></iframe>
+    </div>
+    <input type="button" class="btn btn-primary btn-sm" style="margin-left:20px;" value="Reply" onclick="openReplyForm(this);"/>
   </xsl:template>
 </xsl:stylesheet>
