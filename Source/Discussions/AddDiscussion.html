@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Add Discussion</title>
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="../bootstrap/css/heroic-features.css" rel="stylesheet">
 
 
 
@@ -21,14 +20,14 @@
     <div class="container">
 
         <div class="row">
-            <label>Title:</label>
+            <label for="txtTitle">Title:</label>
         </div>
         <div class="row">
             <input type="text" id="txtTitle" name="txtTitle" class="form-control" />
         </div>
 
         <div class="row">
-            <label>Remarks:</label>
+            <label for="txtRemark">Remarks:</label>
         </div>
         <div class="row">
             <textarea id="txtRemark" name="txtRemark" cols="60" rows="9" class="form-control"></textarea>
@@ -40,10 +39,10 @@
     </div>
     <!-- /.container -->
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../script/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/Discussion.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../script/Discussion.js"></script>
 
     <script>
         function saveReply()
