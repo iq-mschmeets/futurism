@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Query Wizard</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/queryWizard.css" rel="stylesheet" />
+
+    <style>
+        
+
+    </style>
+
+
+</head>
+<body>
+    
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div><!-- /input-group -->
+
+                <div class="divSearchResult">
+                    Search Result...
+                </div>
+                <div class="divClassBox">
+
+                    <ul id="tree1">
+                        <li>
+                            <a href="#">Classes</a>
+                        </li>
+                        <li>
+                            Something
+                            <ul>
+                                <li>Company Maintenance</li>
+                                <li>
+                                    Employees
+                                    <ul>
+                                        <li>
+                                            Reports
+                                            <ul>
+                                                <li>Report1</li>
+                                                <li>Report2</li>
+                                                <li>Report3</li>
+                                            </ul>
+                                        </li>
+                                        <li>Employee Maint.</li>
+                                    </ul>
+                                </li>
+                                <li>Human Resources</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="col-md-9">
+                
+                <div class="box border grey">
+                    <div class="box-title">
+                        <h4><i class="fa fa-columns"></i><span class="hidden-inline-mobile"></span></h4>
+                    </div>
+                    <div class="box-body">
+                        <div class="tabbable header-tabs">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#box_design" data-toggle="tab"><i class="fa fa-circle-o"></i> <span class="hidden-inline-mobile">Design</span></a></li>
+                                <li><a href="#box_sql" data-toggle="tab"><i class="fa fa-laptop"></i> <span class="hidden-inline-mobile">SQL</span></a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="box_design">
+                                    <p>
+                                        
+                                        <h4>Classes in Query</h4>
+
+                                        <div class="divDesignBox">
+
+                                        </div>
+
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="box_sql">
+                                    <p>Content #2</p>
+                                    <p>
+                                        Order of operations:
+                                        1. The event handler for a link/button will create a call to the wizard component's constructor passing in the configuration object. The configuration object
+                                        will either contain the "class meta data" that is "in scope” for the host page, OR it will provide a URL, that the object can use to determine the initial context
+                                        set of classes. The wizard will display these in a tree. The reason for the tree is to allow the user to traverse the relationships that involve the specific class.
+                                        The header of the list will also contain a search field so that the user can search the database for additional class information, and add those to the list.
+ 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script that actually invokes the progress meter from the demo buttons. -->
+    <script>
+
+        $.fn.extend({
+            treed: function (o) {
+
+                var openedClass = 'glyphicon-minus-sign';
+                var closedClass = 'glyphicon-plus-sign';
+
+                if (typeof o != 'undefined') {
+                    if (typeof o.openedClass != 'undefined') {
+                        openedClass = o.openedClass;
+                    }
+                    if (typeof o.closedClass != 'undefined') {
+                        closedClass = o.closedClass;
+                    }
+                };
+
+                //initialize each of the top levels
+                var tree = $(this);
+                tree.addClass("tree");
+                tree.find('li').has("ul").each(function () {
+                    var branch = $(this); //li with children ul
+                    branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
+                    branch.addClass('branch');
+                    branch.on('click', function (e) {
+                        if (this == e.target) {
+                            var icon = $(this).children('i:first');
+                            icon.toggleClass(openedClass + " " + closedClass);
+                            $(this).children().children().toggle();
+                        }
+                    })
+                    branch.children().children().toggle();
+                });
+                //fire event from the dynamically added icon
+                tree.find('.branch .indicator').each(function () {
+                    $(this).on('click', function () {
+                        $(this).closest('li').click();
+                    });
+                });
+                //fire event to open branch if the li contains an anchor instead of text
+                tree.find('.branch>a').each(function () {
+                    $(this).on('click', function (e) {
+                        $(this).closest('li').click();
+                        e.preventDefault();
+                    });
+                });
+                //fire event to open branch if the li contains a button instead of text
+                tree.find('.branch>button').each(function () {
+                    $(this).on('click', function (e) {
+                        $(this).closest('li').click();
+                        e.preventDefault();
+                    });
+                });
+            }
+        });
+
+        //Initialization of treeviews
+
+        $('#tree1').treed({ openedClass: 'glyphicon-folder-open', closedClass: 'glyphicon-folder-close' });
+
+    </script>
+</body>
+</html>

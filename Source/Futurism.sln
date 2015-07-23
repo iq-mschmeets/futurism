@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropTaskOne", "DragDrop
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discussions", "Discussions\Discussions.csproj", "{21328542-1D30-4BF6-988A-6BF91525940C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryWizard", "QueryWizard\QueryWizard.csproj", "{2494A032-025A-43E2-9327-85844AAE7DFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{21328542-1D30-4BF6-988A-6BF91525940C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21328542-1D30-4BF6-988A-6BF91525940C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21328542-1D30-4BF6-988A-6BF91525940C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2494A032-025A-43E2-9327-85844AAE7DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2494A032-025A-43E2-9327-85844AAE7DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2494A032-025A-43E2-9327-85844AAE7DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2494A032-025A-43E2-9327-85844AAE7DFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

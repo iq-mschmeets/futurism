@@ -1,0 +1,6 @@
+E:\Projects\Mark & Randy\futurism\Source\QueryWizard\bin\QueryWizard.dll.config
+E:\Projects\Mark & Randy\futurism\Source\QueryWizard\bin\QueryWizard.dll
+E:\Projects\Mark & Randy\futurism\Source\QueryWizard\bin\QueryWizard.pdb
+E:\Projects\Mark & Randy\futurism\Source\QueryWizard\obj\Debug\QueryWizard.csprojResolveAssemblyReference.cache
+E:\Projects\Mark & Randy\futurism\Source\QueryWizard\obj\Debug\QueryWizard.dll
+E:\Projects\Mark & Randy\futurism\Source\QueryWizard\obj\Debug\QueryWizard.pdb
