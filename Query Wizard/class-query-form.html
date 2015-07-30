@@ -1,0 +1,160 @@
+<form accept-charset="utf-8" accesskey="R" action="#" id="f" method="post" style="margin: 0px; padding: 0px;" tabindex="0">
+	<h3>Person</h3>
+	<input name="CLASS.CLASS_ID" type="hidden" value=""/>
+	<input name="_charset_" type="hidden" value=""/>
+	<table id="finderAttrTable" class="table .table-condensed">
+		<colgroup>
+			<col width="5%"/>
+			<col width="30%"/>
+			<col width="10%"/>
+			<col width="53%"/>
+			<col width="2%"/>
+		</colgroup>
+		<thead>
+			<tr>
+				<th class="find-header" scope="col">Show</th>
+				<th class="find-header" scope="col">Name</th>
+				<th class="find-header" scope="col">Operator</th>
+				<th class="find-header" scope="col">Filter</th>
+			</tr>
+		</thead>
+		<!-- Each row in the tbody represent one attribute. -->
+		<tbody id="finderAtterTbody">
+			<!-- The following row represents the "Prefix" attribute, id 122. It is a picklist type. -->
+			<tr>
+				<td>
+					<input checked="checked" class="columnSelector" id="ck__a__30__169501__122" name="ck__a__30__169501__122" type="checkbox"/>
+				</td>
+				<td>
+					<label for="a__30__169501__122">Prefix</label>
+				</td>
+				<td>
+					<select class="operator" id="aoper__122" name="aoper__122">
+						<option selected="selected" value=" = ">equal</option>
+						<option value=" != ">not equal</option>
+						<option value=" is null ">is null</option>
+						<option value=" is not null ">is not null</option>
+					</select>
+				</td>
+				<td class="inputCell">
+					<select class="sel" data-column="PREFIX" data-type="8" id="a__30__169501__122" name="a__30__169501__122">
+						<option/>
+						<option value="651">Mr.</option>
+						<option value="653">Mrs.</option>
+						<option value="652">Ms.</option>
+					</select>
+				</td>
+			</tr>
+			<!-- The following row represents the First Name attribute, it is a text type. -->
+			<tr>
+				<td>
+					<input checked="checked" class="columnSelector" id="ck__a__30__169501__123" name="ck__a__30__169501__123" type="checkbox"/>
+				</td>
+				<td>
+					<label for="a__30__169501__123">First Name:</label>
+				</td>
+				<td>
+					<select class="operator" id="aoper__123" name="aoper__123">
+						<option selected="selected" value=" LIKE ">like</option>
+						<option value=" = ">equal</option>
+						<option value=" != ">not equal</option>
+						<option value=" NOT LIKE ">not like</option>
+						<option value=" is null ">is null</option>
+						<option value=" is not null ">is not null</option>
+					</select>
+				</td>
+				<td class="inputCell">
+					<input class="dat" data-column="NAME_FIRST" data-type="34" id="a__30__169501__123" name="a__30__169501__123" type="text" value=""/>
+				</td>
+			</tr>
+			<!-- The following row represents the Last Name attribute, it is a text type. -->
+			<tr>
+				<td>
+					<input checked="checked" class="columnSelector" id="ck__a__30__169501__125" name="ck__a__30__169501__125" type="checkbox"/>
+				</td>
+				<td>
+					<label for="a__30__169501__125">Last Name:</label>
+				</td>
+				<td>
+					<select class="operator" id="aoper__125" name="aoper__125">
+						<option selected="selected" value=" LIKE ">like</option>
+						<option value=" = ">equal</option>
+						<option value=" != ">not equal</option>
+						<option value=" NOT LIKE ">not like</option>
+						<option value=" is null ">is null</option>
+						<option value=" is not null ">is not null</option>
+					</select>
+				</td>
+				<td class="inputCell">
+					<input class="dat" data-column="NAME_LAST" data-type="34" id="a__30__169501__125" name="a__30__169501__125" type="text" value=""/>
+				</td>
+			</tr>
+			<!-- The following row represents the Image attribute, it is a hyperlink type. -->
+			<tr>
+				<td>
+					<input checked="checked" class="columnSelector" id="ck__a__30__169501__127" name="ck__a__30__169501__127" type="checkbox"/>
+				</td>
+				<td>
+					<label for="a__30__169501__127">Image</label>
+				</td>
+				<td>
+					<select class="operator" id="aoper__127" name="aoper__127">
+						<option selected="selected" value=" LIKE ">like</option>
+						<option value=" = ">equal</option>
+						<option value=" != ">not equal</option>
+						<option value=" NOT LIKE ">not like</option>
+						<option value=" is null ">is null</option>
+						<option value=" is not null ">is not null</option>
+					</select>
+				</td>
+				<td class="inputCell">
+					<input class="dat" data-column="IMAGE" data-type="4" id="a__30__169501__127" name="a__30__169501__127" type="text" value=""/>
+				</td>
+			</tr>
+			<!-- The following row represents the Birth Date attribute, it is a date type. -->
+			<tr>
+				<td>
+					<input checked="checked" class="columnSelector" id="ck__a__30__169501__132" name="ck__a__30__169501__132" type="checkbox"/>
+				</td>
+				<td>
+					<label for="a__30__169501__132">Birth Date</label>
+				</td>
+				<td>
+					<select class="operator" id="aoper__132" name="aoper__132">
+						<option selected="selected" value=" = ">equal</option>
+						<option value=" != ">not equal</option>
+						<option value=" &lt; ">less than</option>
+						<option value=" &gt; ">greater than</option>
+						<option value=" is null ">is null</option>
+						<option value=" is not null ">is not null</option>
+					</select>
+				</td>
+				<td class="inputCell">
+					<input class="dat date-picker" data-column="BIRTH_DT" data-type="19" id="a__30__169501__132" name="a__30__169501__132" type="date"/>
+				</td>
+			</tr>
+			<!-- The following row represents the Parent A attribute, it is a relationship type. -->
+			<tr>
+				<td>
+					<input checked="checked" class="columnSelector" id="ck__a__30__169501__4814" name="ck__a__30__169501__4814" type="checkbox"/>
+				</td>
+				<td>
+					<label for="a__30__169501__4814">Parent A</label>
+				</td>
+				<td>
+					<select class="operator" id="aoper__4814" name="aoper__4814">
+						<option selected="selected" value=" LIKE ">like</option>
+						<option value=" = ">equal</option>
+						<option value=" != ">not equal</option>
+						<option value=" NOT LIKE ">not like</option>
+						<option value=" is null ">is null</option>
+						<option value=" is not null ">is not null</option>
+					</select>
+				</td>
+				<td class="inputCell">
+					<input class="dat" data-column="PARENTA" data-type="112" id="a__30__169501__4814" name="a__30__169501__4814" type="text" value=""/>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>

@@ -1,0 +1,181 @@
+/**
+This objects represents a "class". A class loosely corresponds to a database table.
+Each of the "attributes" corresponds to a column in the table. This sample contains
+six attributes. There are text, pick list, hyperlink, date, and relationship attributes
+in this sample. 
+
+The meta object also contains fields for id, name, description, package, and privs.
+The id is the unique identifier for this class in the system, and the name is how
+the user will recognize it.
+
+*/
+
+{
+    "attributes": [
+        {
+            "column": "PREFIX",
+            "columnMeta": "ELEMENT_ATTR_C30.PREFIX",
+            "defaultValue": "",
+            "id": 122,
+            "label": "Prefix",
+            "list": [
+                {
+                    "654": "Miss"
+                },
+                {
+                    "651": "Mr."
+                },
+                {
+                    "653": "Mrs."
+                },
+            ],
+            "listID": 112,
+            "listLabel": "Person Prefix",
+            "name": "PREFIX",
+            "pos": 1,
+            "required": false,
+            "size": 0,
+            "toolTip": "Select an appropriate prefix for this person.",
+            "type": 8,
+            "typeName": "Pick List"
+        },
+        {
+            "column": "NAME_FIRST",
+            "columnMeta": "ELEMENT_ATTR_C30.NAME_FIRST",
+            "defaultValue": "",
+            "id": 123,
+            "label": "First Name:",
+            "name": "NAME_FIRST",
+            "pos": 2,
+            "required": false,
+            "size": 100,
+            "toolTip": "Enter this persons Given Name",
+            "type": 34,
+            "typeName": "Text"
+        },
+        {
+            "column": "NAME_LAST",
+            "columnMeta": "ELEMENT_ATTR_C30.NAME_LAST",
+            "defaultValue": "",
+            "id": 125,
+            "label": "Last Name:",
+            "name": "NAME_LAST",
+            "pos": 3,
+            "required": true,
+            "size": 100,
+            "toolTip": "Enter this persons Family Name",
+            "type": 34,
+            "typeName": "Text"
+        },
+        {
+            "column": "IMAGE",
+            "columnMeta": "ELEMENT_ATTR_C30.IMAGE",
+            "defaultValue": "",
+            "id": 127,
+            "label": "Image",
+            "name": "IMAGE",
+            "pos": 4,
+            "required": false,
+            "size": 512,
+            "toolTip": "Upload an image of this person",
+            "type": 4,
+            "typeName": "Hyperlink"
+        },
+        {
+            "column": "BIRTH_DT",
+            "columnMeta": "ELEMENT_ATTR_C30.BIRTH_DT",
+            "defaultValue": "",
+            "id": 132,
+            "label": "Birth Date",
+            "name": "BIRTH_DT",
+            "pos": 5,
+            "required": false,
+            "size": 0,
+            "toolTip": "Enter the date this person was born.",
+            "type": 19,
+            "typeName": "Date"
+        },
+        {
+            "column": "PARENTA",
+            "columnMeta": "ELEMENT_ATTR_C30.PARENTA",
+            "defaultValue": "",
+            "filter": {
+                "id": 7608,
+                "meta": [
+                    {
+                        "displayName": "ELEMENT_ID",
+                        "group": 0,
+                        "label": "ELEMENT_ID",
+                        "meta": "ELEMENT.ELEMENT_ID",
+                        "pos": 1
+                    },
+                    {
+                        "displayName": "A",
+                        "group": 0,
+                        "label": "A",
+                        "meta": "ELEMENT.DESCRIPTION",
+                        "pos": 2
+                    },
+                    {
+                        "displayName": "Name",
+                        "group": 0,
+                        "label": "Name",
+                        "meta": "ELEMENT_ATTR_C1086.NAME",
+                        "pos": 3
+                    },
+                    {
+                        "displayName": "Description",
+                        "group": 0,
+                        "label": "Description",
+                        "meta": "ELEMENT_ATTR_C1086.DESCRIPTION",
+                        "pos": 4
+                    },
+                    {
+                        "displayName": "Actions",
+                        "group": 0,
+                        "label": "Actions",
+                        "meta": "ELEMENT_ATTR_C1086.ELEMENT_ID",
+                        "pos": 5
+                    },
+                    {
+                        "displayName": "Class",
+                        "group": 0,
+                        "label": "Class",
+                        "meta": "CLASS.CLASS_ID",
+                        "pos": 6
+                    }
+                ],
+                "mode": 0,
+                "pageSize": 15
+            },
+            "id": 4814,
+            "idMeta": "ELEMENT_ATTR_C1086.ELEMENT_ID",
+            "isSelect": true,
+            "label": "Parent A",
+            "listID": 7608,
+            "listLabel": "A",
+            "name": "PARENTA",
+            "pos": 6,
+            "required": false,
+            "size": 0,
+            "targetClassID": 1086,
+            "textMeta": "ELEMENT.DESCRIPTION",
+            "toolTip": "Enter Value for Parent:",
+            "type": 112,
+            "typeName": "Relationship"
+        },
+    ],
+    "description": "An element denoting an individual person",
+    "id": 30,
+    "name": "Person",
+    "package": {
+        "id": 7,
+        "name": "Core"
+    },
+    "privs": {
+        "alter": true,
+        "delete": true,
+        "insert": true,
+        "update": true
+    }
+}
