@@ -1,0 +1,6 @@
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplayWidget\bin\ImageDisplayWidget.dll.config
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplayWidget\bin\ImageDisplayWidget.dll
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplayWidget\bin\ImageDisplayWidget.pdb
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplayWidget\obj\Debug\ImageDisplayWidget.csprojResolveAssemblyReference.cache
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplayWidget\obj\Debug\ImageDisplayWidget.dll
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplayWidget\obj\Debug\ImageDisplayWidget.pdb

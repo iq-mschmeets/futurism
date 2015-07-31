@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AceEditor", "AceEditor\AceEditor.csproj", "{3EF72E15-B035-4243-AD68-7E662D05035E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveProgressMeter", "LiveProgressMeter\LiveProgressMeter.csproj", "{59B83D7F-E728-404B-9795-504496516B77}"
@@ -15,7 +13,46 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discussions", "Discussions\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryWizard", "QueryWizard\QueryWizard.csproj", "{2494A032-025A-43E2-9327-85844AAE7DFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropArtifactCreation", "DragDropArtifactCreation\DragDropArtifactCreation.csproj", "{44762186-0952-41E0-9FC5-0C810A01B66C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDisplayWidget", "ImageDisplayWidget\ImageDisplayWidget.csproj", "{BE48040E-361E-44FB-B2B1-CDC4C1677609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDisplay", "ImageDisplay\ImageDisplay.csproj", "{6E48BF82-24DE-4D09-BA42-9905AAFA7293}"
+EndProject
 Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://d82krai.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AceEditor\\AceEditor.csproj
+		SccProjectName1 = AceEditor
+		SccLocalPath1 = AceEditor
+		SccProjectUniqueName2 = Discussions\\Discussions.csproj
+		SccProjectName2 = Discussions
+		SccLocalPath2 = Discussions
+		SccProjectUniqueName3 = DragDropTaskOne\\DragDropTaskOne.csproj
+		SccProjectName3 = DragDropTaskOne
+		SccLocalPath3 = DragDropTaskOne
+		SccProjectUniqueName4 = LiveProgressMeter\\LiveProgressMeter.csproj
+		SccProjectName4 = LiveProgressMeter
+		SccLocalPath4 = LiveProgressMeter
+		SccProjectUniqueName5 = QueryWizard\\QueryWizard.csproj
+		SccProjectName5 = QueryWizard
+		SccLocalPath5 = QueryWizard
+		SccProjectUniqueName6 = TableController\\TableController.csproj
+		SccProjectName6 = TableController
+		SccLocalPath6 = TableController
+		SccProjectUniqueName7 = DragDropArtifactCreation\\DragDropArtifactCreation.csproj
+		SccProjectName7 = DragDropArtifactCreation
+		SccLocalPath7 = DragDropArtifactCreation
+		SccProjectUniqueName8 = ImageDisplayWidget\\ImageDisplayWidget.csproj
+		SccProjectName8 = ImageDisplayWidget
+		SccLocalPath8 = ImageDisplayWidget
+		SccProjectUniqueName9 = ImageDisplay\\ImageDisplay.csproj
+		SccProjectName9 = ImageDisplay
+		SccLocalPath9 = ImageDisplay
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -45,6 +82,18 @@ Global
 		{2494A032-025A-43E2-9327-85844AAE7DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2494A032-025A-43E2-9327-85844AAE7DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2494A032-025A-43E2-9327-85844AAE7DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44762186-0952-41E0-9FC5-0C810A01B66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44762186-0952-41E0-9FC5-0C810A01B66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44762186-0952-41E0-9FC5-0C810A01B66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44762186-0952-41E0-9FC5-0C810A01B66C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE48040E-361E-44FB-B2B1-CDC4C1677609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE48040E-361E-44FB-B2B1-CDC4C1677609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE48040E-361E-44FB-B2B1-CDC4C1677609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE48040E-361E-44FB-B2B1-CDC4C1677609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E48BF82-24DE-4D09-BA42-9905AAFA7293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E48BF82-24DE-4D09-BA42-9905AAFA7293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E48BF82-24DE-4D09-BA42-9905AAFA7293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E48BF82-24DE-4D09-BA42-9905AAFA7293}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,6 @@
+E:\Projects\Mark & RandyTFS\futurism\Source\DragDropArtifactCreation\bin\DragDropArtifactCreation.dll.config
+E:\Projects\Mark & RandyTFS\futurism\Source\DragDropArtifactCreation\bin\DragDropArtifactCreation.dll
+E:\Projects\Mark & RandyTFS\futurism\Source\DragDropArtifactCreation\bin\DragDropArtifactCreation.pdb
+E:\Projects\Mark & RandyTFS\futurism\Source\DragDropArtifactCreation\obj\Debug\DragDropArtifactCreation.csprojResolveAssemblyReference.cache
+E:\Projects\Mark & RandyTFS\futurism\Source\DragDropArtifactCreation\obj\Debug\DragDropArtifactCreation.dll
+E:\Projects\Mark & RandyTFS\futurism\Source\DragDropArtifactCreation\obj\Debug\DragDropArtifactCreation.pdb

@@ -1,0 +1,12 @@
+D:\Deepak\Projects\Futurism\trunk\Source\ImageDisplay\bin\DragDropTaskOne.dll.config
+D:\Deepak\Projects\Futurism\trunk\Source\ImageDisplay\bin\DragDropTaskOne.dll
+D:\Deepak\Projects\Futurism\trunk\Source\ImageDisplay\bin\DragDropTaskOne.pdb
+D:\Deepak\Projects\Futurism\trunk\Source\ImageDisplay\obj\Debug\DragDropTaskOne.dll
+D:\Deepak\Projects\Futurism\trunk\Source\ImageDisplay\obj\Debug\DragDropTaskOne.pdb
+D:\Deepak\Projects\Futurism\trunk\Source\ImageDisplay\obj\Debug\ImageDisplay.csprojResolveAssemblyReference.cache
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplay\bin\DragDropTaskOne.dll.config
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplay\bin\DragDropTaskOne.dll
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplay\bin\DragDropTaskOne.pdb
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplay\obj\Debug\ImageDisplay.csprojResolveAssemblyReference.cache
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplay\obj\Debug\DragDropTaskOne.dll
+E:\Projects\Mark & RandyTFS\futurism\Source\ImageDisplay\obj\Debug\DragDropTaskOne.pdb

@@ -87,8 +87,8 @@
                     <div class="box-body">
                         <div class="tabbable header-tabs">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#box_design" data-toggle="tab"><i class="fa fa-circle-o"></i> <span class="hidden-inline-mobile">Design</span></a></li>
-                                <li><a href="#box_sql" data-toggle="tab"><i class="fa fa-laptop"></i> <span class="hidden-inline-mobile">SQL</span></a></li>
+                                <li class="active"><a href="#box_design" data-toggle="tab"><i class="fa fa-circle-o"></i> <span>Design</span></a></li>
+                                <li><a href="#box_sql" data-toggle="tab"><i class="fa fa-laptop"></i> <span>SQL</span></a></li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane fade in active" id="box_design">
@@ -147,7 +147,8 @@
                     }
                 };
 
-                //initialize each of the top levels
+                
+
                 var tree = $(this);
                 tree.addClass("tree");
                 tree.find('li').has("ul").each(function () {
@@ -163,20 +164,23 @@
                     })
                     branch.children().children().toggle();
                 });
-                //fire event from the dynamically added icon
+                
+
                 tree.find('.branch .indicator').each(function () {
                     $(this).on('click', function () {
                         $(this).closest('li').click();
                     });
                 });
-                //fire event to open branch if the li contains an anchor instead of text
+                
+
                 tree.find('.branch>a').each(function () {
                     $(this).on('click', function (e) {
                         $(this).closest('li').click();
                         e.preventDefault();
                     });
                 });
-                //fire event to open branch if the li contains a button instead of text
+                
+
                 tree.find('.branch>button').each(function () {
                     $(this).on('click', function (e) {
                         $(this).closest('li').click();
