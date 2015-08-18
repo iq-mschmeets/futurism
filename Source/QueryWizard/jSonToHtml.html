@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script src="js/jquery.js"></script>
+
+
+</head>
+<body>
+
+    <input id="button1" type="button" value="Generate Form" onclick="testJson()" />
+
+    <div id="divForm"></div>
+
+
+    <script type="text/javascript">
+
+        var cls_ID = 0;
+        var attr_ID = 0;
+
+        function testJson() {
+            $.ajax({
+                type: "POST",
+                url: "Default.aspx/getJson",
+                data: "{}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    //alert('asdf');
+                    var fileJson = eval("(" + msg.d + ")");
+                    cls_ID = fileJson.id;
+                    generateForm(fileJson);
+
+                },
+                error: function (msg) {
+
+                }
+            });
+        };
+
+
+        function generateForm(json)
+        {
+            var finalForm = '';
+            var start = '' +
+    '<form accept-charset="utf-8" accesskey="R" action="#" id="f" method="post" style="margin: 0px; padding: 0px;" tabindex="0">' +
+	'<h3>' + json.name + '</h3>' +
+	'<input name="CLASS.CLASS_ID" type="hidden" value=""/>' +
+	'<input name="_charset_" type="hidden" value=""/>' +
+	'<table id="finderAttrTable" class="table .table-condensed">' +
+		'<colgroup>' +
+			'<col width="5%"/>' +
+			'<col width="30%"/>' +
+			'<col width="10%"/>' +
+			'<col width="53%"/>' +
+			'<col width="2%"/>' +
+		'</colgroup>' +
+		'<thead>' +
+			'<tr>' +
+				'<th class="find-header" scope="col">Show</th>' +
+				'<th class="find-header" scope="col">Name</th>' +
+				'<th class="find-header" scope="col">Operator</th>' +
+				'<th class="find-header" scope="col">Filter</th>' +
+			'</tr>' +
+		'</thead>' +
+		'<!-- Each row in the tbody represent one attribute. -->' +
+		'<tbody id="finderAtterTbody">';
+
+            finalForm += start;
+
+            $(json.attributes).each(function () {
+                //console.log(this);
+                attr_ID = this.id;
+
+                var mid = '<tr>' +
+				    '<td>' +
+					    '<input checked="checked" class="columnSelector" id="ck__a__' + cls_ID + '__0__' + attr_ID + '" name="ck__a__' + cls_ID + '__0__' + attr_ID + '" type="checkbox"/>' +
+				    '</td>' +
+				    '<td>' +
+					    '<label for="ck__a__' + cls_ID + '__0__' + attr_ID + '">' + this.label + '</label>' +
+				    '</td>' +
+				    '<td>';
+                mid += getOperators(this);
+			    mid += '</td>' +
+				    '<td class="inputCell">';
+			    mid += getFilter(this);
+				mid+='</td>' +
+			    '</tr>';
+
+                finalForm += mid;
+            });
+
+
+            var end = '</tbody>' +
+	            '</table>' +
+            '</form>';
+            finalForm += end;
+
+            $('#divForm').append(finalForm);
+
+        }
+
+
+        function getOperators(clsAttr)
+        {
+            var ret = '';
+            if(clsAttr.typeName == 'Pick List')
+            {
+                ret = '<select class="operator" id="aoper__' + attr_ID + '" name="aoper__' + attr_ID + '">' +
+						'<option selected="selected" value=" = ">equal</option>' +
+						'<option value=" != ">not equal</option>' +
+						'<option value=" is null ">is null</option>' +
+						'<option value=" is not null ">is not null</option>' +
+					'</select>';
+            }
+            else if (clsAttr.typeName == 'Text')
+            {
+                ret = '<select class="operator" id="aoper__' + attr_ID + '" name="aoper__' + attr_ID + '">' +
+						'<option selected="selected" value=" LIKE ">like</option>' +
+						'<option value=" = ">equal</option>' +
+						'<option value=" != ">not equal</option>' +
+						'<option value=" NOT LIKE ">not like</option>' +
+						'<option value=" is null ">is null</option>' +
+						'<option value=" is not null ">is not null</option>' +
+					'</select>';
+            }
+            else if (clsAttr.typeName == 'Hyperlink') {
+                ret = '<select class="operator" id="aoper__' + attr_ID + '" name="aoper__' + attr_ID + '">' +
+						'<option selected="selected" value=" LIKE ">like</option>' +
+						'<option value=" = ">equal</option>' +
+						'<option value=" != ">not equal</option>' +
+						'<option value=" NOT LIKE ">not like</option>' +
+						'<option value=" is null ">is null</option>' +
+						'<option value=" is not null ">is not null</option>' +
+					'</select>';
+            }
+            else if (clsAttr.typeName == 'Date') {
+                ret = '<select class="operator" id="aoper__' + attr_ID + '" name="aoper__' + attr_ID + '">' +
+						'<option selected="selected" value=" = ">equal</option>' +
+						'<option value=" != ">not equal</option>' +
+						'<option value=" &lt; ">less than</option>' +
+						'<option value=" &gt; ">greater than</option>' +
+						'<option value=" is null ">is null</option>' +
+						'<option value=" is not null ">is not null</option>' +
+					'</select>';
+            }
+            else if (clsAttr.typeName == 'Relationship') {
+                ret = '<select class="operator" id="aoper__' + attr_ID + '" name="aoper__' + attr_ID + '">' +
+						'<option selected="selected" value=" LIKE ">like</option>' +
+						'<option value=" = ">equal</option>' +
+						'<option value=" != ">not equal</option>' +
+						'<option value=" NOT LIKE ">not like</option>' +
+						'<option value=" is null ">is null</option>' +
+						'<option value=" is not null ">is not null</option>' +
+					'</select>';
+            }
+
+            return ret;
+        }
+
+        function getFilter(clsAttr) {
+            var ret = '';
+            if (clsAttr.typeName == 'Pick List') {
+                ret = '<select class="operator" id="aoper__' + attr_ID + '" name="aoper__' + attr_ID + '">';
+                ret += '<option/>';
+                var result = clsAttr.list;
+                $.each(result, function () {
+                    var list = $.map(this, function (val, key) {
+                        var o = {};
+                        o[key] = val;
+                        ret += '<option value="' + key + '">' + val + '</option>';
+                    });
+                });
+
+            }
+            else if (clsAttr.typeName == 'Text') {
+                ret = '<input class="dat" data-column="' + clsAttr.column + '" data-type="' + clsAttr.type + '" id="a__' + cls_ID + '__0__' + attr_ID + '" name="a__' + cls_ID + '__0__' + attr_ID + '" type="text" value=""/>';
+            }
+            else if (clsAttr.typeName == 'Hyperlink') {
+                ret = '<input class="dat" data-column="' + clsAttr.column + '" data-type="' + clsAttr.type + '" id="a__' + cls_ID + '__0__' + attr_ID + '" name="a__' + cls_ID + '__0__' + attr_ID + '" type="text" value=""/>';
+            }
+            else if (clsAttr.typeName == 'Date') {
+                ret = '<input class="dat date-picker" data-column="' + clsAttr.column + '" data-type="' + clsAttr.type + '" id="a__' + cls_ID + '__0__' + attr_ID + '" name="a__' + cls_ID + '__0__' + attr_ID + '" type="date"/>';
+            }
+            else if (clsAttr.typeName == 'Relationship') {
+                ret = '<input class="dat" data-column="' + clsAttr.column + '" data-type="' + clsAttr.type + '" id="a__' + cls_ID + '__0__' + attr_ID + '" name="a__' + cls_ID + '__0__' + attr_ID + '" type="text" value=""/>';
+            }
+
+            return ret;
+        }
+
+    </script>
+
+
+</body>
+</html>

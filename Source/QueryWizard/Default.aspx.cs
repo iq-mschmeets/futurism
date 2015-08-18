@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -16,26 +17,6 @@ public partial class _Default : System.Web.UI.Page
     {
 
     }
-
-    [WebMethod]
-    public static jSonResponse getProgress()
-    {
-        progress++;
-        if (progress >= 100)
-            progress = 0;
-
-        if(_jSonResponse == null)
-            _jSonResponse = new jSonResponse();
-
-        _jSonResponse.percentComplete = progress;
-        _jSonResponse.messages = new List<message>() {
-            new message(){cssClass="alert-info", text= "It is your custom text from server. "+ Guid.NewGuid().ToString() +" :)"},
-            new message(){cssClass="alert-danger", text= "****************. "+ Guid.NewGuid().ToString() +" :)"}
-        };
-
-        return _jSonResponse;
-    }
-
 
     [WebMethod]
     public static jSonResponse getFiles()
@@ -58,24 +39,13 @@ public partial class _Default : System.Web.UI.Page
 
 
     [WebMethod]
-    public static bool jsSaveFile(string fileContent)
+    public static object getJson()
     {
-        Thread.Sleep(1000);
-        return true;
-    }
+        string allText = System.IO.File.ReadAllText(HttpContext.Current.Server.MapPath("~/class-meta-data.json"));
 
-    [WebMethod]
-    public static bool cssSaveFile(string fileContent)
-    {
-        Thread.Sleep(2000);
-        return true;
-    }
-
-    [WebMethod]
-    public static bool htmlSaveFile(string fileContent)
-    {
-        Thread.Sleep(3000);
-        return true;
+        //object jsonObject = JsonConvert.DeserializeObject(allText);
+        //return jsonObject;
+        return allText;
     }
 
 }
