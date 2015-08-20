@@ -106,7 +106,7 @@
                 <!-- If the record is populated there will be an img tag here,
                 if not populated, the span will be empty, but contain it’s
                 attributes. -->
-                <img src="" data-height-constraint="128" data-width-constraint="128" />
+                <img src="https://www.zsl.org/sites/default/files/styles/wysiwyg/public/image/2014-02/lion-1.jpg" data-height-constraint="128" data-width-constraint="128" />
             </span>
         </div>
 
@@ -138,7 +138,7 @@
                 <!-- If the record is populated there will be an img tag here,
                 if not populated, the span will be empty, but contain it’s
                 attributes. -->
-                <img src="" data-height-constraint="128" data-width-constraint="128" />
+                <img src="http://thumbs.dreamstime.com/x/male-african-lion-prowl-7472672.jpg" data-height-constraint="128" data-width-constraint="128" />
             </span>
         </div>
 
@@ -181,53 +181,14 @@
 
     <script>
 
+
         $('span img').DragDrop({
             url: 'http://localhost:63650/Default.aspx/cssSaveFile',
             callback: function (fileEncryptedData) {
                 alert('file uploaded212.');
             }
         })
-        //$(document).ready(function () {
-        //    $('span img').mouseover(function () {
-        //        if ($(this).parent().find('input[name=file]').length == 0) {
-        //            var htmlFormatFile = $("<input type='file' id='file1' name='file' style='top: 200px;position: absolute;' onchange='uploadFile(this);' onmouseover='applycss(this);' />");
-        //            $(this).parent().append(htmlFormatFile);
-        //            if ($(this).parent()[0].id > 1) {
-        //                var width = (80 * $(this).parent()[0].id) - 80;
-        //                $("#file1").css("margin-left", width + 'px');
-        //            }
-        //        }
-        //    });
-        //    $('span img').mouseleave(function () {
-        //        if ($(this).parent().find("input").length > 0) {
-        //            if (!$(this).parent().find("input").is(':hover'))
-        //            { $(this).parent().find("input").remove(); }
-        //        }
-        //        $(this).removeProp("-webkit-transform");
-        //        $(this).removeProp("-moz-transform");
-        //        $(this).removeProp("opacity");
-        //        $(this).removeProp("-webkit-opacity");
-        //        $(this).removeProp("-moz-opacity");
-        //    });
-        //});
-        //function uploadFile(obj) {
-        //    if (obj.files && obj.files[0]) {
-        //        var reader = new FileReader();
 
-        //        reader.onload = function (e) {
-        //            $(obj).parent().find('img').attr('src', e.target.result);
-        //        }
-
-        //        reader.readAsDataURL(obj.files[0]);
-        //    }
-        //}
-        //function applycss(obj) {
-        //    $(obj).parent().find('img').css("-webkit-transform", 'scale(3,3)');
-        //    $(obj).parent().find('img').css("-moz-transform", 'scale(3,3)');
-        //    $(obj).parent().find('img').css("opacity", 1);
-        //    $(obj).parent().find('img').css("-webkit-opacity", 1);
-        //    $(obj).parent().find('img').css("-moz-opacity", 1);
-        //}
     </script>
 
 
