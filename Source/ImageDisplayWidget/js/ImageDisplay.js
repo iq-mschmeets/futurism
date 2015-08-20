@@ -212,7 +212,7 @@ $.fn.extend({
         $(obj).parent().find('img').addClass('imagesize');
     },
     resizeImage: function () {
-        $('img').each(function () {
+        $('img[data-height-constraint]').each(function () {
             var img = this;
 
             img.onload = function () {
