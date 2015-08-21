@@ -219,9 +219,10 @@ function postData() {
 
     var bsModal = $('#__dlg');
     // Fields needed to create a Core.Artifact record.
-    formData.append('NAME', $('#__txtName').val());
-    formData.append('SUBJECT', $('#__txtSubject').val());
-    formData.append('DESCRIPTION', $('#__txtDescription').val());
+    var PREFIX = '_COL_';
+    formData.append(PREFIX+'NAME', $('#__txtName').val());
+    formData.append(PREFIX+'SUBJECT', $('#__txtSubject').val());
+    formData.append(PREFIX+'DESCRIPTION', $('#__txtDescription').val());
     formData.append('CLASS.CLASS_ID', '23');
     formData.append('verb', 'Create');
    
