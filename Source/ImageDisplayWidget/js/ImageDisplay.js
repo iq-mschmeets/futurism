@@ -41,16 +41,17 @@ $.fn.extend({
 
                 /////////////////////////////////////////
 
-
-                var formData = new FormData();
-                for (var i = 0; i < files.length; i++) {
-                    if (formdata) formData.append('file', files[i]);
-                }
-
                 var span = $(this).parent();
                 var data = $(span).data();
                 var elementName = "a__" + data.classid + "__" + data.eid + "__" + data.attributeid;
                 formData.append('name', elementName);
+
+                var formData = new FormData();
+                for (var i = 0; i < files.length; i++) {
+                    if( formdata ){
+                        formData.append(elementName, files[i]);
+                    } 
+                }
 
                 // now post a new XHR request
                 if (formdata) {
