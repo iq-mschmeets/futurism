@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Web
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AceEditor", "AceEditor\AceEditor.csproj", "{3EF72E15-B035-4243-AD68-7E662D05035E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveProgressMeter", "LiveProgressMeter\LiveProgressMeter.csproj", "{59B83D7F-E728-404B-9795-504496516B77}"
@@ -19,9 +21,35 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDisplayWidget", "Image
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDisplay", "ImageDisplay\ImageDisplay.csproj", "{6E48BF82-24DE-4D09-BA42-9905AAFA7293}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GranttChart", "http://localhost:2430", "{0A376103-41A1-4975-9B1B-7853E900934A}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_2430"
+		Debug.AspNetCompiler.PhysicalPath = "GranttChart\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2430\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_2430"
+		Release.AspNetCompiler.PhysicalPath = "GranttChart\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2430\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "GranttChart\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 10
+		SccNumberOfProjects = 11
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://d82krai.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -52,6 +80,11 @@ Global
 		SccProjectUniqueName9 = ImageDisplay\\ImageDisplay.csproj
 		SccProjectName9 = ImageDisplay
 		SccLocalPath9 = ImageDisplay
+		SccWebProject10 = true
+		SccProjectUniqueName10 = http://localhost:2430
+		SccProjectName10 = GranttChart
+		SccLocalPath10 = GranttChart
+		SccProjectEnlistmentChoice10 = 2
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +127,10 @@ Global
 		{6E48BF82-24DE-4D09-BA42-9905AAFA7293}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E48BF82-24DE-4D09-BA42-9905AAFA7293}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E48BF82-24DE-4D09-BA42-9905AAFA7293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A376103-41A1-4975-9B1B-7853E900934A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A376103-41A1-4975-9B1B-7853E900934A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A376103-41A1-4975-9B1B-7853E900934A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A376103-41A1-4975-9B1B-7853E900934A}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,247 @@
+{
+    "data": [
+        {
+            "d": [
+                "2782-1350",
+                "Camps Caroll Henry Tech Refresh",
+                "2782",
+                "Conduct Evaluation and Source Selection",
+                "1350",
+                "01-Jan-2014",
+                "",
+                "30-Jan-2014",
+                "",
+                "3207",
+                "60",
+                "482"
+            ]
+        },
+        {
+            "d": [
+                "2795-1350",
+                "Consolidated Intelligence Center (CIC)",
+                "2795",
+                "Conduct Evaluation and Source Selection",
+                "1350",
+                "05-Feb-2014",
+                "",
+                "26-Feb-2014",
+                "",
+                "3636",
+                "60",
+                "482"
+            ]
+        },
+        {
+            "d": [
+                "2786-1350",
+                "Hawaii D V OSP 12 MOD",
+                "2786",
+                "Conduct Evaluation and Source Selection",
+                "1350",
+                "05-Mar-2014",
+                "",
+                "26-Mar-2014",
+                "",
+                "3339",
+                "60",
+                "482"
+            ]
+        },
+        {
+            "d": [
+                "2780-1350",
+                "SCC AOC Modernization_VIDS",
+                "2780",
+                "Conduct Evaluation and Source Selection",
+                "1350",
+                "05-Apr-2014",
+                "",
+                "26-Apr-2014",
+                "",
+                "3141",
+                "60",
+                "482"
+            ]
+        },
+        {
+            "d": [
+                "2789-1350",
+                "SCC EUCOM Modernization",
+                "2789",
+                "Conduct Evaluation and Source Selection",
+                "1350",
+                "05-Feb-2014",
+                "",
+                "26-Apr-2014",
+                "",
+                "3438",
+                "60",
+                "482"
+            ]
+        },
+        {
+            "d": [
+                "2781-1350",
+                "SCC SOUTHCOM Modernization_VTC to HD",
+                "2781",
+                "Conduct Evaluation and Source Selection",
+                "1350",
+                "05-May-2014",
+                "",
+                "26-May-2014",
+                "",
+                "3174",
+                "60",
+                "482"
+            ]
+        },
+        {
+            "d": [
+                "2778-1350",
+                "SCC Site R Modernization_01",
+                "2778",
+                "Conduct Evaluation and Source Selection",
+                "1350",
+                "05-Jun-2014",
+                "",
+                "26-Jun-2014",
+                "",
+                "3075",
+                "60",
+                "482"
+            ]
+        },
+        {
+            "d": [
+                "2779-1350",
+                "SCC Site R Modernization_02",
+                "2779",
+                "Conduct Evaluation and Source Selection",
+                "1350",
+                "05-Jul-2014",
+                "",
+                "26-Jul-2014",
+                "",
+                "3108",
+                "60",
+                "482"
+            ]
+        },
+        {
+            "d": [
+                "2794-1350",
+                "SCC USFK Modernization Effort",
+                "2794",
+                "Conduct Evaluation and Source Selection",
+                "1350",
+                "05-Aug-2014",
+                "",
+                "26-Aug-2014",
+                "",
+                "3603",
+                "60",
+                "482"
+            ]
+        }
+
+    ],
+    "meta": [
+        {
+            "display": true,
+            "group": 0,
+            "label": "Milestone",
+            "meta": "ELEMENT.DESCRIPTION",
+            "pos": 1,
+            "type": 0
+        },
+        {
+            "display": true,
+            "group": 1,
+            "label": "Project",
+            "meta": "ELEMENT.DESCRIPTION",
+            "pos": 2,
+            "type": 0
+        },
+        {
+            "display": false,
+            "group": 1,
+            "label": "Project_ID",
+            "meta": "ELEMENT_ATTR_C54.ELEMENT_ID",
+            "pos": 3,
+            "type": 0
+        },
+        {
+            "display": true,
+            "group": 2,
+            "label": "Step",
+            "meta": "ELEMENT.DESCRIPTION",
+            "pos": 4,
+            "type": 0
+        },
+        {
+            "display": false,
+            "group": 2,
+            "label": "Step_ID",
+            "meta": "ELEMENT_ATTR_C61.ELEMENT_ID",
+            "pos": 5,
+            "type": 0
+        },
+        {
+            "display": true,
+            "group": 0,
+            "label": "Begin Estimated",
+            "meta": "ELEMENT_ATTR_C60.BEGIN_ESTIMATED",
+            "pos": 6,
+            "type": 0
+        },
+        {
+            "display": true,
+            "group": 0,
+            "label": "Begin Actual",
+            "meta": "PSEUDO.START_DT",
+            "pos": 7,
+            "type": 0
+        },
+        {
+            "display": true,
+            "group": 0,
+            "label": "End Estimated",
+            "meta": "ELEMENT_ATTR_C60.END_ESTIMATED",
+            "pos": 8,
+            "type": 0
+        },
+        {
+            "display": true,
+            "group": 0,
+            "label": "End Actual",
+            "meta": "PSEUDO.END_DT",
+            "pos": 9,
+            "type": 0
+        },
+        {
+            "display": false,
+            "group": 0,
+            "label": "Actions",
+            "meta": "ELEMENT.ELEMENT_ID",
+            "pos": 10,
+            "type": 0
+        },
+        {
+            "display": false,
+            "group": 0,
+            "label": "Class",
+            "meta": "CLASS.CLASS_ID",
+            "pos": 11,
+            "type": 0
+        },
+        {
+            "display": true,
+            "group": 0,
+            "label": "Days Late",
+            "meta": "DAYS LATE",
+            "pos": 12,
+            "type": 0
+        }
+    ]
+}
