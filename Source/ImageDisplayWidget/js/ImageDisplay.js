@@ -1,4 +1,4 @@
-﻿var __imgPosturl;
+var __imgPosturl;
 var __imgPostOptions;
 
 $.fn.extend({
@@ -18,23 +18,25 @@ $.fn.extend({
 
             // Stop default browser actions
             $this.bind('dragover', function (event) {
-                this.className = 'hover';
+                $this.addClass('drag-hover');
                 event.stopPropagation()
                 event.preventDefault()
-            })
+            });
 
             // Stop default browser actions
             $this.bind('dragleave', function (event) {
-                this.className = '';
+                $this.removeClass('drag-hover');
                 event.stopPropagation()
                 event.preventDefault()
-            })
+            });
 
             // Catch drop event
             $this.bind('drop', function (event) {
                 // Stop default browser actions
-                event.stopPropagation()
-                event.preventDefault()
+                $this.removeClass('drag-hover');
+                event.stopPropagation();
+                event.preventDefault();
+                var node = this;
 
                 // Get all files that are dropped
                 files = event.originalEvent.target.files || event.originalEvent.dataTransfer.files
@@ -44,24 +46,26 @@ $.fn.extend({
                 var span = $(this).parent();
                 var data = $(span).data();
                 var elementName = "a__" + data.classid + "__" + data.eid + "__" + data.attributeid;
-                formData.append('name', elementName);
 
                 var formData = new FormData();
                 for (var i = 0; i < files.length; i++) {
-                    if( formdata ){
+                    if( formData ){
                         formData.append(elementName, files[i]);
                     } 
                 }
+                formData.append('ELEMENT.ELEMENT_ID', data.eid);
+                formData.append('CLASS.CLASS_ID', data.classid);
+                formData.append('verb', 'Update');
 
                 // now post a new XHR request
-                if (formdata) {
+                if (formData) {
                     var xhr = new XMLHttpRequest();
                     xhr.open('POST', options.url);
                     xhr.onload = function () {
                         //progress.value = progress.innerHTML = 100;
                     };
 
-                    xhr.upload.onprogress = function (event) {
+                    xhr.upload.onprogress = function (event) {                       
                         if (event.lengthComputable) {
                             var complete = (event.loaded / event.total * 100 | 0);
                         }
@@ -73,17 +77,16 @@ $.fn.extend({
 
 
                 //////////////////////////////////////////
-
                 // Convert uploaded file to data URL and pass trought callback
-                if (options.callback) {
-                    var reader = new FileReader()
-                    reader.onload = function (event) {
-                        options.callback(event.target.result)
-                    }
-                    reader.readAsDataURL(files[0])
+                var reader = new FileReader()
+                reader.onload = function (event) {
+                    node.src = reader.result;
+                    $(node).addClass("profilePhoto imagesize");
                 }
-                return false
-            })
+                reader.readAsDataURL(files[0]);
+
+                return false;
+            });
 
             $('span img').mouseover(function () {
                 var btnId = $($(this).parent()).attr('id') + '_btn';
@@ -160,15 +163,15 @@ $.fn.extend({
                 };
                 img.src = window.URL.createObjectURL(obj.files[0]);
 
-                var formData = new FormData();
-                for (var i = 0; i < files.length; i++) {
-                    if (formdata) formData.append('file', files[i]);
-                }
-
                 var span = $(obj).parent();
                 var data = $(span).data();
                 var elementName = "a__" + data.classid + "__" + data.eid + "__" + data.attributeid;
-                formData.append('name', elementName);
+
+                var formData = new FormData();
+                for (var i = 0; i < files.length; i++) {
+                    if (formdata) formData.append(elementName, files[i]);
+                }
+
 
                 // now post a new XHR request
                 if (formdata) {
@@ -213,6 +216,7 @@ $.fn.extend({
         $(obj).parent().find('img').addClass('imagesize');
     },
     resizeImage: function () {
+        // $('img[data-height-constraint]').on("load", function(){
         $('img[data-height-constraint]').each(function () {
             var img = this;
 
@@ -241,6 +245,9 @@ $.fn.extend({
                     width = width * ratio;    // Reset width to match scaled image
                     height = height * ratio;    // Reset height to match scaled image
                 }
+            }
+            if( this.complete ){
+                $(this).load();
             }
         });
     }
