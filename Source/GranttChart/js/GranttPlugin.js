@@ -24,12 +24,23 @@
                 var jsonData = jQuery.parseJSON(data);
                 var finalData = [];
                 var item;
-                var counter = 0;
+                var counter = 1;
                 var meta;
+                var descIndex;
 
                 $(jsonData.data).each(function () {
+                    counter = 1;
                     item = this;
                     meta = jsonData.meta;
+
+
+                    $(meta).each(function () {
+                        if (this.group == 0 && this.meta == "ELEMENT.DESCRIPTION") {
+                            descIndex = counter;
+                            return;
+                        }
+                        counter++;
+                    });
 
                     //$(item.d).each(function () {
 
@@ -39,19 +50,19 @@
                     var granttItemDet = new Object();
                     granttItemDet.from = item.d[5];
                     granttItemDet.to = item.d[7];
-                    granttItemDet.label = item.d[1];
+                    granttItemDet.label = item.d[descIndex];
                     granttItemDet.customClass = item.d[10];
                     granttItemValues.push(granttItemDet);
 
                     var granttItem = new Object();
-                    granttItem.name = item.d[1];
+                    granttItem.name = item.d[descIndex];
                     granttItem.desc = item.d[3];
                     granttItem.values = granttItemValues;
 
                     finalData.push(granttItem);
                     //    }
                     //});
-                    counter++;
+
                 });
 
                 console.log(finalData);
