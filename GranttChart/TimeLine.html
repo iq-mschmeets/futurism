@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+    <title>Timeline JSON data</title>
+
+    <style type="text/css">
+        body {
+            font-size: 10pt;
+            font-family: verdana, sans, arial, sans-serif;
+        }
+    </style>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/TimeLine.js"></script>
+    <script type="text/javascript" src="js/TimeLinePlugin.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/timeline.css">
+
+    
+    <script>
+
+        var ApplyTimeLine = $(".mytimeline").ApplyTimeLine({
+            dataURL: 'data.json', el: '.mytimeline'
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <div id="mytimeline"></div>
+
+    <div id="info"></div>
+
+</body>
+</html>
